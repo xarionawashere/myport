@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "next build && next start",
-    "dev": "next dev"
+    "dev": "next dev",
+    "build": "next build"
   },
   "dependencies": {
     "bulma": "^0.9.3",
