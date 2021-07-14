@@ -1,0 +1,92 @@
+@-webkit-keyframes tracking-in-contract {
+  0% {
+    letter-spacing: 1em;
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 0.6;
+  }
+
+  100% {
+    letter-spacing: normal;
+    opacity: 1;
+  }
+}
+
+@keyframes tracking-in-contract {
+  0% {
+    letter-spacing: 1em;
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 0.6;
+  }
+
+  100% {
+    letter-spacing: normal;
+    opacity: 1;
+  }
+}
+
+.tracking-in-expand {
+  -webkit-animation: tracking-in-contract 1.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) 1s both;
+  animation: tracking-in-contract 1.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) 1s both;
+  font-weight: 700;
+  font-size: 25px;
+}
+
+/*For header*/
+
+#shadowBox {
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.2);
+  /* Black w/opacity/see-through */
+  border: 3px solid;
+}
+
+.rainbow {
+  text-align: center;
+  text-decoration: underline;
+  font-size: 32px;
+  font-family: monospace;
+  letter-spacing: 5px;
+}
+
+.rainbow_text_animated {
+  background: linear-gradient(to right, #6666ff, #0099ff, #00ff00, #ff3399, #6666ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rainbow_animation 6s ease-in-out infinite;
+  background-size: 400% 100%;
+}
+
+@keyframes rainbow_animation {
+
+  0%,
+  100% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 100% 0;
+  }
+}
+
+.portmain {
+  background-color: #c22929;
+}
+
+.portmain_text {
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.1rem;
+  text-shadow: black;
+}
+
+.porticons {
+  display: inline-block;
+}

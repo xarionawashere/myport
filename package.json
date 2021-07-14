@@ -1,0 +1,28 @@
+{
+  "name": "hello-node",
+  "version": "0.0.1",
+  "description": "A simple Node app built on fastify, instantly up and running.",
+  "main": "server.js",
+  "scripts": {
+    "start": "next build && next start",
+    "dev": "next dev"
+  },
+  "dependencies": {
+    "bulma": "^0.9.3",
+    "framer-motion": "^4.1.17",
+    "next": "^11.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.2.0",
+    "terminal.xr": "^1.1.8"
+  },
+  "engines": {
+    "node": "12.x"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ]
+}
