@@ -9,7 +9,7 @@ function Header() {
             <meta property="og:description" content="Personality Portfolio"/>
             <meta property="og:type" content="portfolio"/>
             <meta property="og:image" content={Config.personalInfo.pp}/>
-            <meta name="theme-color" content="#ff0000"/>
+            <meta name="theme-color" content="#7700ff"/>
             <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
         </Head>
     </div>)
