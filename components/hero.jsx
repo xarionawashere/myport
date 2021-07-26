@@ -57,7 +57,7 @@ function Hero({ name, pp, description, user }) {
                 <FaSpotify style={{"color": "greenyellow"}}/> 
                 <a href={`https://open.spotify.com/track/${user?.spotify?.track_id}`} style={{"textAlign": "left", "color": "greenyellow"}}>{" "}{Config.personalInfo.favArtists.includes(user.spotify.artist.split(";")[0] ? user.spotify.artist.split(";")[0] : user.spotify.artist) 
                 ? 
-                (<a style={{"color": "greenyellow"}}>{user.spotify.song} - <span style={{"color": "redBright"}}>{user.spotify.artist.split(";")[0]}</span>; {user.spotify.artist.split(";")[1]}</a>) 
+                (<a style={{"color": "greenyellow"}}>{user.spotify.song} - <span style={{"color": "red"}}>{user.spotify.artist.split(";")[0]}</span>; {user.spotify.artist.split(";")[1]}</a>) 
                 : 
                 (<a style={{"color": "greenyellow"}}>{user.spotify.song} - {user.spotify.artist}</a>)}
                 </a>
