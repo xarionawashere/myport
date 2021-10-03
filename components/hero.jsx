@@ -47,11 +47,6 @@ function Hero({ name, pp, description, user }) {
           <div className="column">
             <div className="container has-text-centered" style={{ "textAlign": "left" }}>
               <h1 className="rainbow rainbow_text_animated">{Config.personalInfo.workAt}</h1>
-              {user?.activities?.length > 0 && user?.activities?.some(val => val.name === "YouTube") ? (
-                <div style={{ "color": "#ff4a6e" }}>
-                  <FaYoutube /> <a style={{ "color": "#ff4a6e" }}>{user?.activities[0].details} - {user?.activities[0].state ? user?.activities[0].state : "Videoda değil"}</a>
-                </div>
-              ) : ""}
               <h2 className="portmain_text">{Config.personalInfo.description}</h2>
             </div>
             <hr />
