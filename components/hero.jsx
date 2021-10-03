@@ -52,25 +52,23 @@ function Hero({ name, pp, description, user }) {
                   <FaYoutube /> <a style={{ "color": "#ff4a6e" }}>{user?.activities[0].details} - {user?.activities[0].state ? user?.activities[0].state : "Videoda değil"}</a>
                 </div>
               ) : ""}
-              { !user.listening_to_spotify ? "" : (
-              <div>
-                <FaSpotify style={{"color": "greenyellow"}}/> 
-                <a href={`https://open.spotify.com/track/${user?.spotify?.track_id}`} style={{"textAlign": "left", "color": "greenyellow"}}>{" "}{Config.personalInfo.favArtists.includes(user.spotify.artist.split(";")[0] ? user.spotify.artist.split(";")[0] : user.spotify.artist) 
-                ? 
-                (<a style={{"color": "greenyellow"}}>{user.spotify.song} - <span style={{"color": "#00ff5e"}}>{user.spotify.artist.split(";")[0]}</span>; {user.spotify.artist.split(";")[1]}</a>) 
-                : 
-                (<a style={{"color": "greenyellow"}}>{user.spotify.song} - {user.spotify.artist}</a>)}
-                </a>
-                <br/>
-              </div>
-              ) }
               <h2 className="portmain_text">{Config.personalInfo.description}</h2>
             </div>
             <hr />
             {/* İcons */}
             <center>
               <div className="porticons">
-                <a href="https://open.spotify.com/user/699akvo5l56k1ofputv5742dk?si=51ec57c36e3e4360"><FaSpotify style={{ "width": "20", "height": "20", "margin": "16", "color": "greenYellow" }} /></a>
+                { !user.listening_to_spotify ? (<a href="https://open.spotify.com/user/699akvo5l56k1ofputv5742dk?si=51ec57c36e3e4360"><FaSpotify style={{ "width": "20", "height": "20", "margin": "16", "color": "greenYellow" }} /></a>) : (
+                  <div>
+                    <a href={`https://open.spotify.com/user/699akvo5l56k1ofputv5742dk?si=51ec57c36e3e4360`}><FaSpotify style={{"color": "greenyellow"}}/></a>
+                    <a href={`https://open.spotify.com/track/${user?.spotify?.track_id}`} style={{"textAlign": "left", "color": "greenyellow"}}>{" "}{Config.personalInfo.favArtists.includes(user.spotify.artist.split(";")[0] ? user.spotify.artist.split(";")[0] : user.spotify.artist) 
+                    ?
+                    (<a style={{"color": "greenyellow"}}>{user.spotify.song} - <span style={{"color": "aqua"}}>{user.spotify.artist.split(";")[0]}</span>; {user.spotify.artist.split(";")[1]}</a>) 
+                    :
+                    (<a style={{"color": "greenyellow"}}>{user.spotify.song} - {user.spotify.artist}</a>)
+                    }</a>
+                  </div>
+                ) }
                 <a href="https://discord.com/users/585562692132274197"><FaDiscord style={{ "width": "20", "height": "20", "margin": "16", "color": "#7289d9" }} /></a>
                 <a href="https://github.com/xarionawashere"><FaGithub style={{ "width": "20", "height": "20", "margin": "16", "color": "white" }} /></a>
                 <a href="https://www.youtube.com/channel/UCLa3L_yab6fs7lhIJoxXl2w"><FaYoutube style={{ "width": "20", "height": "20", "margin": "16", "color": "red" }} /></a>
